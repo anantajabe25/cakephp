@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+Options +FollowSymLinks
+RewriteEngine on
+    RewriteRule    ^$    app/webroot/    [L]
+    RewriteRule    (.*) app/webroot/$1    [L]
+</IfModule>
+# Use PHP 7.0 as default
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php70 .htm .html .shtml
+</IfModule>
+
